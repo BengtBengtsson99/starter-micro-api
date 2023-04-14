@@ -1,4 +1,6 @@
 var http = require('http');
+fs = require('fs');
+
 http.createServer(function (req, res) {
     console.log(`Just got a request at ${req.url}!`)
     res.write('Yo!');
