@@ -2,8 +2,7 @@ var http = require('http');
 fs = require('fs');
 
 
-fs.readFile('./html/app.html', function (err, html))
-{
+fs.readFile('./html/app.html', function (err, html) {
     if (err) {
         throw err;
     }
@@ -13,5 +12,7 @@ fs.readFile('./html/app.html', function (err, html))
         res.write(html);
         res.end();
     }).listen(process.env.PORT || 3000);
-};
+
+});
+
 
